@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84BA8928-6CE6-4BCA-9467-B3E6EACBEA0C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Effort, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a46696d54971e6d, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\Effort.1.1.4\lib\net45\Effort.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\NLog.4.3.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NMemory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a46696d54971e6d, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\NMemory.1.0.1\lib\net45\NMemory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Source\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionResult\FailedActionResult.cs" />
+    <Compile Include="Business\BusinessBase.cs" />
+    <Compile Include="Cache\MyCache.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Commands\ProviderServiceCommandBase.cs" />
+    <Compile Include="Commands\ServiceCommandBase.cs" />
+    <Compile Include="Contract\Base\CommandBase.cs" />
+    <Compile Include="Contract\Base\CreationRequestBase.cs" />
+    <Compile Include="Contract\Base\CreationResponseBase.cs" />
+    <Compile Include="Contract\Base\DeletionRequestBase.cs" />
+    <Compile Include="Contract\Base\DeletionResponseBase.cs" />
+    <Compile Include="Contract\Base\Exception\ConfigurationException.cs" />
+    <Compile Include="Contract\Base\Exception\ProcessingException.cs" />
+    <Compile Include="Contract\Base\Exception\ValidationException.cs" />
+    <Compile Include="Contract\Base\IRequest.cs" />
+    <Compile Include="Contract\Base\IResponse.cs" />
+    <Compile Include="Contract\Base\PagingRequestRecord.cs" />
+    <Compile Include="Contract\Base\PagingResponseRecord.cs" />
+    <Compile Include="Contract\Base\RequestHeaderRecord.cs" />
+    <Compile Include="Contract\Base\ResponseStatusRecord.cs" />
+    <Compile Include="Contract\Base\RetrievalRequestBase.cs" />
+    <Compile Include="Contract\Base\RetrievalResponseBase.cs" />
+    <Compile Include="Contract\Base\SearchRequestBase.cs" />
+    <Compile Include="Contract\Base\SearchResponseBase.cs" />
+    <Compile Include="Contract\Base\UpdationRequestBase.cs" />
+    <Compile Include="Contract\Base\UpdationResponseBase.cs" />
+    <Compile Include="Contract\Enums.cs" />
+    <Compile Include="Contract\Records\ProductFilterRecord.cs" />
+    <Compile Include="Contract\Records\ProductRecord.cs" />
+    <Compile Include="Contract\Requests\CreateProductRequest.cs" />
+    <Compile Include="Contract\Requests\DeleteProductRequest.cs" />
+    <Compile Include="Contract\Requests\RetrieveProductRequest.cs" />
+    <Compile Include="Contract\Requests\SearchProductsRequest.cs" />
+    <Compile Include="Contract\Requests\UpdateProductRequest.cs" />
+    <Compile Include="Contract\Responses\CreateProductResponse.cs" />
+    <Compile Include="Contract\Responses\DeleteProductResponse.cs" />
+    <Compile Include="Contract\Responses\RetrieveProductResponse.cs" />
+    <Compile Include="Contract\Responses\SearchProductsResponse.cs" />
+    <Compile Include="Contract\Responses\UpdateProductResponse.cs" />
+    <Compile Include="Contract\Base\ICrudService.cs" />
+    <Compile Include="Contract\Services\IProductService.cs" />
+    <Compile Include="Contract\Records\Base\IDataTransferObject.cs" />
+    <Compile Include="Contract\Records\Base\IFilterRecord.cs" />
+    <Compile Include="Controllers\ApiControllerBase.cs" />
+    <Compile Include="Controllers\ApiCrudControllerBase.cs" />
+    <Compile Include="Identifiers\IdentifierBase.cs" />
+    <Compile Include="Identifiers\VerhoeffCheckDigit.cs" />
+    <Compile Include="IntegrationTest\EffortDatabaseStrategy.cs" />
+    <Compile Include="IntegrationTest\IControllerTest.cs" />
+    <Compile Include="IntegrationTest\ITestDatabaseStrategy.cs" />
+    <Compile Include="IntegrationTest\TestBase.cs" />
+    <Compile Include="IntegrationTest\TestDatabaseStrategyFactory.cs" />
+    <Compile Include="Mock\DbSetMocker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CrudProviderBase.cs" />
+    <Compile Include="Providers\ICrudProvider.cs" />
+    <Compile Include="Providers\IProvider.cs" />
+    <Compile Include="Providers\IProviderFactory.cs" />
+    <Compile Include="Providers\IProviderFactoryBase.cs" />
+    <Compile Include="Providers\ProviderBase.cs" />
+    <Compile Include="Providers\ProviderFactoryBase.cs" />
+    <Compile Include="Providers\SimpleServiceProviderBase.cs" />
+    <Compile Include="Providers\SimpleWcfClient.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IRepositoryFactory.cs" />
+    <Compile Include="Repositories\PagedResult.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\RepositoryFactoryBase.cs" />
+    <Compile Include="Repositories\SortingRule.cs" />
+    <Compile Include="Services\IServiceFacade.cs" />
+    <Compile Include="Services\ServiceFacadeBase.cs" />
+    <Compile Include="Services\ServiceFactory.cs" />
+    <Compile Include="Services\WcfServiceBase.cs" />
+    <Compile Include="SystemConfiguration\SystemConfiguration.cs" />
+    <Compile Include="ViewModels\IViewModel.cs" />
+    <Compile Include="ViewModels\ModelConverterFactory.cs" />
+    <Compile Include="ViewModels\Pagination.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

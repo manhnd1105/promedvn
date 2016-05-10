@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F449D6DE-119B-4AC1-ACF8-E07F93F27BC1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularJS</RootNamespace>
+    <AssemblyName>AngularJS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include=".htaccess" />
+    <Content Include=".jshintrc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\account\account.js" />
+    <Content Include="app\account\login\login.controller.js" />
+    <Content Include="app\account\login\login.css" />
+    <Content Include="app\account\login\login.html" />
+    <Content Include="app\account\settings\settings.controller.js" />
+    <Content Include="app\account\settings\settings.html" />
+    <Content Include="app\account\signup\signup.controller.js" />
+    <Content Include="app\account\signup\signup.html" />
+    <Content Include="app\admin\admin.controller.js" />
+    <Content Include="app\admin\admin.css" />
+    <Content Include="app\admin\admin.html" />
+    <Content Include="app\admin\admin.js" />
+    <Content Include="app\app.css" />
+    <Content Include="app\app.js" />
+    <Content Include="app\brand\brand.controller.js" />
+    <Content Include="app\brand\brand.controller.spec.js" />
+    <Content Include="app\brand\brand.css" />
+    <Content Include="app\brand\brand.html" />
+    <Content Include="app\brand\brand.js" />
+    <Content Include="app\cart\cart.controller.js" />
+    <Content Include="app\cart\cart.html" />
+    <Content Include="app\cart\cart.js" />
+    <Content Include="app\category\category.controller.js" />
+    <Content Include="app\category\category.css" />
+    <Content Include="app\category\category.html" />
+    <Content Include="app\category\category.js" />
+    <Content Include="app\checkout\checkout.controller.js" />
+    <Content Include="app\checkout\checkout.controller.spec.js" />
+    <Content Include="app\checkout\checkout.css" />
+    <Content Include="app\checkout\checkout.html" />
+    <Content Include="app\checkout\checkout.js" />
+    <Content Include="app\contact\contact.controller.js" />
+    <Content Include="app\contact\contact.controller.spec.js" />
+    <Content Include="app\contact\contact.css" />
+    <Content Include="app\contact\contact.html" />
+    <Content Include="app\contact\contact.js" />
+    <Content Include="app\country\country.controller.js" />
+    <Content Include="app\country\country.controller.spec.js" />
+    <Content Include="app\country\country.css" />
+    <Content Include="app\country\country.html" />
+    <Content Include="app\country\country.js" />
+    <Content Include="app\coupon\coupon.controller.js" />
+    <Content Include="app\coupon\coupon.controller.spec.js" />
+    <Content Include="app\coupon\coupon.css" />
+    <Content Include="app\coupon\coupon.html" />
+    <Content Include="app\coupon\coupon.js" />
+    <Content Include="app\customer\customer.controller.js" />
+    <Content Include="app\customer\customer.controller.spec.js" />
+    <Content Include="app\customer\customer.css" />
+    <Content Include="app\customer\customer.html" />
+    <Content Include="app\customer\customer.js" />
+    <Content Include="app\dashboard\dashboard.controller.js" />
+    <Content Include="app\dashboard\dashboard.controller.spec.js" />
+    <Content Include="app\dashboard\dashboard.css" />
+    <Content Include="app\dashboard\dashboard.html" />
+    <Content Include="app\dashboard\dashboard.js" />
+    <Content Include="app\directive\directive.directive.js" />
+    <Content Include="app\directive\directive.directive.spec.js" />
+    <Content Include="app\directive\modal.css" />
+    <Content Include="app\directive\table.html" />
+    <Content Include="app\documentation\documentation.controller.js" />
+    <Content Include="app\documentation\documentation.controller.spec.js" />
+    <Content Include="app\documentation\documentation.css" />
+    <Content Include="app\documentation\documentation.html" />
+    <Content Include="app\documentation\documentation.js" />
+    <Content Include="app\factory\Cart\Cart.service.js" />
+    <Content Include="app\factory\Cart\Cart.service.spec.js" />
+    <Content Include="app\factory\factory.service.js" />
+    <Content Include="app\factory\factory.service.spec.js" />
+    <Content Include="app\feature\feature.controller.js" />
+    <Content Include="app\feature\feature.controller.spec.js" />
+    <Content Include="app\feature\feature.css" />
+    <Content Include="app\feature\feature.html" />
+    <Content Include="app\feature\feature.js" />
+    <Content Include="app\filter\filter.filter.js" />
+    <Content Include="app\filter\filter.filter.spec.js" />
+    <Content Include="app\inventory\inventory.controller.js" />
+    <Content Include="app\inventory\inventory.controller.spec.js" />
+    <Content Include="app\inventory\inventory.css" />
+    <Content Include="app\inventory\inventory.html" />
+    <Content Include="app\inventory\inventory.js" />
+    <Content Include="app\invoice\invoice.controller.js" />
+    <Content Include="app\invoice\invoice.controller.spec.js" />
+    <Content Include="app\invoice\invoice.css" />
+    <Content Include="app\invoice\invoice.html" />
+    <Content Include="app\invoice\invoice.js" />
+    <Content Include="app\main\main.controller.js" />
+    <Content Include="app\main\main.controller.spec.js" />
+    <Content Include="app\main\main.css" />
+    <Content Include="app\main\main.html" />
+    <Content Include="app\main\main.js" />
+    <Content Include="app\main\product-details.html" />
+    <Content Include="app\order\order.controller.js" />
+    <Content Include="app\order\order.controller.spec.js" />
+    <Content Include="app\order\order.css" />
+    <Content Include="app\order\order.html" />
+    <Content Include="app\order\order.js" />
+    <Content Include="app\paymentMethod\paymentMethod.controller.js" />
+    <Content Include="app\paymentMethod\paymentMethod.controller.spec.js" />
+    <Content Include="app\paymentMethod\paymentMethod.css" />
+    <Content Include="app\paymentMethod\paymentMethod.html" />
+    <Content Include="app\paymentMethod\paymentMethod.js" />
+    <Content Include="app\product\product.controller.js" />
+    <Content Include="app\product\product.controller.spec.js" />
+    <Content Include="app\product\product.css" />
+    <Content Include="app\product\product.html" />
+    <Content Include="app\product\product.js" />
+    <Content Include="app\settings.js" />
+    <Content Include="app\shipping\shipping.controller.js" />
+    <Content Include="app\shipping\shipping.controller.spec.js" />
+    <Content Include="app\shipping\shipping.css" />
+    <Content Include="app\shipping\shipping.html" />
+    <Content Include="app\shipping\shipping.js" />
+    <Content Include="app\shop\shop.controller.js" />
+    <Content Include="app\shop\shop.controller.spec.js" />
+    <Content Include="app\shop\shop.css" />
+    <Content Include="app\shop\shop.html" />
+    <Content Include="app\shop\shop.js" />
+    <Content Include="app\theme.css" />
+    <Content Include="assets\images\AjaxLoader.gif" />
+    <Content Include="assets\images\spinner.gif" />
+    <Content Include="assets\img\banner.jpg" />
+    <Content Include="assets\img\biri.jpg" />
+    <Content Include="assets\img\brand.jpg" />
+    <Content Include="assets\img\brands.jpg" />
+    <Content Include="assets\img\cart.jpg" />
+    <Content Include="assets\img\categories.jpg" />
+    <Content Include="assets\img\change-password.jpg" />
+    <Content Include="assets\img\customers.jpg" />
+    <Content Include="assets\img\installation.jpg" />
+    <Content Include="assets\img\login.jpg" />
+    <Content Include="assets\img\logo.gif" />
+    <Content Include="assets\img\logo2.gif" />
+    <Content Include="assets\img\navbar.jpg" />
+    <Content Include="assets\img\orders.jpg" />
+    <Content Include="assets\img\product-details.jpg" />
+    <Content Include="assets\img\products.jpg" />
+    <Content Include="assets\img\search.jpg" />
+    <Content Include="assets\img\sort.jpg" />
+    <Content Include="assets\img\store.jpg" />
+    <Content Include="assets\img\user-menu.jpg" />
+    <Content Include="components\auth\auth.service.js" />
+    <Content Include="components\auth\user.service.js" />
+    <Content Include="components\modal\modal.html" />
+    <Content Include="components\modal\modal.service.js" />
+    <Content Include="components\mongoose-error\mongoose-error.directive.js" />
+    <Content Include="components\navbar\bootstrap.min.js" />
+    <Content Include="components\navbar\megamenu.css" />
+    <Content Include="components\navbar\navbar.controller.js" />
+    <Content Include="components\navbar\navbar.html" />
+    <Content Include="components\socket\socket.mock.js" />
+    <Content Include="components\socket\socket.service.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="index.html" />
+    <Content Include="js\jquery.blockUI.js" />
+    <Content Include="js\jquery.form.js" />
+    <Content Include="robots.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54405</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54405/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
